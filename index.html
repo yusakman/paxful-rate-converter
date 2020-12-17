@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Paxful Rate Converter</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h2 class="heading display-5 pb-3">Paxful Rate Converter</h2>
+            <form id="price-converter">
+              <div class="form-group">
+                <div class="input-group mb-2">
+                  <label for="cryptoList"></label>
+                  <select class="form-control" id="cryptoList">
+                    <option value="ripple">Ripple</option>
+                    <option value="stellar">Stellar</option>
+                    <option value="tron">Tron</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="litecoin">Litecoin</option>
+                    <option value="dogecoin">Dogecoin</option>
+                    <option value="eos">EOS</option>
+                    <option value="bitcoin-cash">Bitcoin Cash</option>
+                  </select>
+                </div>
+                <div class="input-group mb-2">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="dolar"
+                    placeholder="US$"
+                  />
+                </div>
+                <input
+                  type="button"
+                  class="btn btn-danger"
+                  onclick="getSellRate()"
+                  value="Get Sell Rate"
+                />
+                <input
+                  type="button"
+                  class="btn btn-success"
+                  onclick="convert()"
+                  value="Get Buy Rate"
+                />
+                <div
+                  class="card card-body center text mt-1 mb-1"
+                  id="card-result"
+                >
+                  <h7 id="resultSend"></h7>
+                  <h7 id="resultTrade"></h7>
+                  <h7 id="resultWithdrawl"></h7>
+                  <div class="alert alert-primary" role="alert">
+                    <h7 id="resultNote"></h7>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div id="text-area" class="pt-3">
+              <div class="form-group">
+                <label for="formControlTextArea">Copy Paste Here</label>
+                <textarea
+                  class="form-control"
+                  id="formControlTextArea"
+                  rows="5"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
