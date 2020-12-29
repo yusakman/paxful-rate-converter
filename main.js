@@ -109,11 +109,11 @@ async function calculateResultSell() {
 function calculateFeeSell() {
   if (amount <= 20) {
     let feeCut = (amount * 0.53) / 100;
-    feeTrade = (amount * 0.075) / 100;
-    amount = amount - (feeCut + feeTrade) - 0.1;
+    let feeTrade = (amount * 0.075) / 100;
+    amount = amount - (feeCut + feeTrade) - 0.2;
   } else {
     let feeCut = (amount * 0.53) / 100;
-    feeTrade = (amount * 0.07) / 100;
-    amount = amount - (feeCut + feeTrade);
+    let feeTrade = (amount * 0.07) / 100;
+    amount = amount - (feeCut + feeTrade) - 0.25;
   }
 }
