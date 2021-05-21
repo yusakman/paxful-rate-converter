@@ -41,11 +41,11 @@ async function calculateResultSell() {
       resultWithdrawl.innerHTML = `For withdraw: ${result + 0.25}`;
       break;
     case "stellar":
-      result = Number((amount / data.stellar.usd).toFixed(2)) - 0.01;
+      result = Number((amount / data.stellar.usd).toFixed(2)) - 0.02;
       resultTrade.innerHTML = `For trade: ${
-        result + 0.01 + (result + 0.01) * fee
+        result + 0.02 + (result + 0.02) * fee
       }`;
-      resultWithdrawl.innerHTML = `For withdraw: ${result + 0.01}`;
+      resultWithdrawl.innerHTML = `For withdraw: ${result + 0.02}`;
       break;
     case "tron":
       result = Number((amount / data.tron.usd).toFixed(2)) - 1;
@@ -53,11 +53,11 @@ async function calculateResultSell() {
       resultWithdrawl.innerHTML = `For withdraw: ${result + 1}`;
       break;
     case "ethereum":
-      result = Number((amount / data.ethereum.usd).toFixed(4)) - 0.005;
+      result = Number((amount / data.ethereum.usd).toFixed(4)) - 0.006;
       resultTrade.innerHTML = `For trade: ${
-        result + 0.005 + (result + 0.005) * fee
+        result + 0.006 + (result + 0.006) * fee
       }`;
-      resultWithdrawl.innerHTML = `For withdraw: ${result + 0.005}`;
+      resultWithdrawl.innerHTML = `For withdraw: ${result + 0.006}`;
       break;
     case "litecoin":
       result = Number((amount / data.litecoin.usd).toFixed(3)) - 0.001;
@@ -67,9 +67,9 @@ async function calculateResultSell() {
       resultWithdrawl.innerHTML = `For withdraw: ${result + 0.001}`;
       break;
     case "dogecoin":
-      result = Number((amount / data.dogecoin.usd).toFixed(2)) - 50;
-      resultTrade.innerHTML = `For trade: ${result + 50 + (result + 50) * fee}`;
-      resultWithdrawl.innerHTML = `For withdraw: ${result + 50}`;
+      result = Number((amount / data.dogecoin.usd).toFixed(2)) - 5;
+      resultTrade.innerHTML = `For trade: ${result + 5 + (result + 5) * fee}`;
+      resultWithdrawl.innerHTML = `For withdraw: ${result + 5}`;
       break;
     case "eos":
       result = Number((amount / data.eos.usd).toFixed(2)) - 0.1;
@@ -90,7 +90,7 @@ async function calculateResultSell() {
   if (coin == "ethereum") {
     resultSend.innerHTML = `Hello sir, I will send you ${result.toFixed(
       4
-    )} ${coin} (already included 0.005 ETH Binance Withdrawl's Fee, it's kinda high right now $1+), if okay, send me your address, if cancel, let me know, thanks.`;
+    )} ${coin} (already included 0.006 ETH Binance Withdrawl's Fee, it's kinda high right now), if okay, send me your address, if cancel, let me know, thanks.`;
   } else if (coin == "ripple") {
     resultSend.innerHTML = `Hello sir, I will send you ${result.toFixed(
       2
